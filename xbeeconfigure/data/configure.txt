@@ -1,3 +1,4 @@
+# This configuration is for wireless uploading
 [Common]
 BD 4
 RO 10
