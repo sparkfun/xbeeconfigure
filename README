@@ -11,9 +11,12 @@ Requirements
 Features
 --------
 
- * Auto-detect baud rate -- If an XBee module has been configured
-   at 9600, 19200, 38400, 57600 or 115200 this tool will determine
-   the correct speed to communicate at in order to reconfigure it.
+ * Auto-detect baud rate -- If an XBee module has been configured at
+   1200, 2400, 4800, 9600, 19200, 38400, 57600 or 115200 this tool
+   will determine the correct speed to communicate at in order to
+   reconfigure it. (It checks them in rough order of likely use so it's
+   not much slower than specifying it directly and it means you don't
+   have to remember/know the existing baud rate.)
 
  * Configuration settings file -- 
 
