@@ -1,2 +1,44 @@
 xbeeconfigure -- a tool to configure XBee modules
 
+Requirements
+------------
+
+ * "GUI for Processing"
+   This needs to be installed if you are running the tool
+   from within Processing.
+   <http://www.lagers.org.uk/g4p/distribution/web/>
+
+Features
+--------
+
+ * Auto-detect baud rate -- If an XBee module has been configured
+   at 9600, 19200, 38400, 57600 or 115200 this tool will determine
+   the correct speed to communicate at in order to reconfigure it.
+
+ * Configuration settings file -- 
+
+Usage
+-----
+
+Connect your XBee module to the SparkFun USB Explorer board and then
+connect the board to your computer. (If you do not connect the board
+before running the tool the serial port will not appear in the pop-up
+list.)
+
+Now run the xbeeconfigure tool.
+
+ * Select the correct serial port from the pop-up menu.
+
+ * The configuration that ships with the script is designed to be used
+   for wireless bootloading. This means one XBee needs to be configured
+   as a "Transmitter" and the other as a "Receiver". This will allow the
+   Arduino reset signal to be sent to the Arduino.
+
+ * Click on the "Configure as Transmitter" or "Configure as Receiver" button
+   and wait for it to turn from yellow back to blue.
+
+ * Hopefully the configuration will have been successful. The Processing
+   console (or possibly system log) will contain a message if it was not
+   successful.
+
+
