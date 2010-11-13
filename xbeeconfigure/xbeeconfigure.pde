@@ -8,6 +8,7 @@ GCombo cboSerialPort;
 
 GButton btnProgramAsTx;
 GButton btnProgramAsRx;
+GButton btnProgramDefault;
 
 void setup(){
   size(435, 300);
@@ -18,6 +19,8 @@ void setup(){
   btnProgramAsTx = new GButton(this, "Configure as Transmitter", 10, 40, 200, 20);
 
   btnProgramAsRx = new GButton(this, "Configure as Receiver", 220, 40, 200, 20);
+  
+  btnProgramDefault = new GButton(this, "Reset to Defaults", 105, 80, 200, 20);
 
   cboSerialPort = new GCombo(this, availablePorts, availablePorts.length, 10, 10, 200);  
 
@@ -37,6 +40,8 @@ void handleButtonEvents(GButton button) {
       configureDevice(cboSerialPort.selectedText(), MODE_TRANSMITTER);
     } else if (button == btnProgramAsRx) {
       configureDevice(cboSerialPort.selectedText(), MODE_RECEIVER);
+    } else if (button == btnProgramDefault) {
+      configureDevice(cboSerialPort.selectedText(), MODE_DEFAULTS);
     }
   }   
 }	
@@ -81,6 +86,7 @@ int matchResponse(Serial theSerialPort, String matchString) {
   return NO_MATCH;
 } 
 
+final int MODE_DEFAULTS = -1;
 final int MODE_BOTH = 0;
 final int MODE_TRANSMITTER = 1;
 final int MODE_RECEIVER = 2;
@@ -89,6 +95,12 @@ final int MODE_RECEIVER = 2;
 String[] getConfiguration(int modeRequired) {
   /*
    */
+   
+  if (modeRequired == MODE_DEFAULTS) {
+    // This assumes we reset to the defaults before uploading.
+    return new String[0];
+  }
+   
   String[] configuration = loadStrings("configure.txt");
  
   int currentMode = MODE_BOTH;
