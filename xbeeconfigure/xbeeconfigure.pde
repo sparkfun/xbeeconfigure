@@ -4,6 +4,8 @@ import processing.serial.*;
 
 import guicomponents.*;
 
+
+GLabel lblSerialPort;
 GCombo cboSerialPort;
 
 GButton btnProgramAsTx;
