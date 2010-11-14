@@ -246,7 +246,8 @@ void configureDevice(String serialPortName, int functionalityMode) {
   
   if (enterCommandMode(serialPort)) {
 
-    if (sendCommand(serialPort, "RE")) { // Reset to defaults
+    // TODO: Don't special case baud rate/reset defaults.
+    if ((functionalityMode == MODE_BAUD_RATE) || sendCommand(serialPort, "RE")) { // Reset to defaults except if setting only baud rate
 
       if (uploadConfiguration(serialPort, configuration)) {
 
