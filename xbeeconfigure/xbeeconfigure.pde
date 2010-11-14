@@ -87,6 +87,7 @@ int matchResponse(Serial theSerialPort, String matchString) {
   return NO_MATCH;
 } 
 
+final int MODE_BAUD_RATE = -2;
 final int MODE_DEFAULTS = -1;
 final int MODE_BOTH = 0;
 final int MODE_TRANSMITTER = 1;
