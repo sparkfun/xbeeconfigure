@@ -77,6 +77,16 @@ void handleSliderEvents(GSlider slider) {
 
 void draw(){
   background(200);
+  
+  stroke(150);
+  
+  line(5, 40, 430, 40);
+  
+  line(5, 80, 430, 80);
+  
+  line(5, 120, 430, 120);  
+
+  line(5, 190, 430, 190);
 }
 
 
