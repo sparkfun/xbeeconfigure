@@ -21,15 +21,29 @@ void setup(){
   size(435, 300);
   
   String[] availablePorts = Serial.list();
-  
-  
-  btnProgramAsTx = new GButton(this, "Configure as Transmitter", 10, 40, 200, 20);
 
-  btnProgramAsRx = new GButton(this, "Configure as Receiver", 220, 40, 200, 20);
-  
-  btnProgramDefault = new GButton(this, "Reset to Defaults", 105, 80, 200, 20);
 
-  cboSerialPort = new GCombo(this, availablePorts, availablePorts.length, 10, 10, 200);  
+  btnProgramAsTx = new GButton(this, "Configure as Transmitter", 10, 50, 200, 20);
+
+  btnProgramAsRx = new GButton(this, "Configure as Receiver", 220, 50, 200, 20);
+
+  
+  btnProgramDefault = new GButton(this, "Reset to Defaults", 105, 90, 200, 20);
+
+
+  // The button is placed above the baud rate pop-up because otherwise the overlap causes problems with
+  // selecting items from the menu.
+  btnProgramBaudRate = new GButton(this, "Set baud rate", 105, 132, 200, 20);
+
+  cboBaudRate = new GCombo(this, new String [] {"1200", "2400", "4800", "9600", "19200", "38400", "57600", "115200",}, 8, 155, 162, 100);  
+
+  cboBaudRate.setSelected("9600");
+
+
+  // This is added last so that it overlays the other UI elements when it pops up.
+  cboSerialPort = new GCombo(this, availablePorts, availablePorts.length, 80, 10, 200);  
+
+  lblSerialPort = new GLabel(this, "Serial port:", 10, 8, 200, 20 );  
 
 }
 
