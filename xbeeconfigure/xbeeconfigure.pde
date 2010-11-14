@@ -8,6 +8,7 @@ GCombo cboSerialPort;
 
 GButton btnProgramAsTx;
 GButton btnProgramAsRx;
+
 GButton btnProgramDefault;
 
 void setup(){
