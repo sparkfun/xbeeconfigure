@@ -13,6 +13,10 @@ GButton btnProgramAsRx;
 
 GButton btnProgramDefault;
 
+GCombo cboBaudRate;
+GButton btnProgramBaudRate;
+
+
 void setup(){
   size(435, 300);
   
