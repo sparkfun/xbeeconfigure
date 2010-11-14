@@ -63,6 +63,8 @@ void handleButtonEvents(GButton button) {
       configureDevice(cboSerialPort.selectedText(), MODE_RECEIVER);
     } else if (button == btnProgramDefault) {
       configureDevice(cboSerialPort.selectedText(), MODE_DEFAULTS);
+    } if (button == btnProgramBaudRate) {
+      configureDevice(cboSerialPort.selectedText(), MODE_BAUD_RATE);
     }
   }   
 }	
@@ -131,6 +133,9 @@ String[] getConfiguration(int modeRequired) {
   if (modeRequired == MODE_DEFAULTS) {
     // This assumes we reset to the defaults before uploading.
     return new String[0];
+  } else if (modeRequired == MODE_BAUD_RATE) {
+    // This assumes we don't reset to the defaults before uploading.
+    return new String[] {"BD " + cboBaudRate.selectedIndex()};
   }
    
   String[] configuration = loadStrings("configure.txt");
