@@ -30,6 +30,39 @@ list.)
 
 Now run the xbeeconfigure tool.
 
+
+= How to: Reset to default configuration =
+
+ * Select the correct serial port from the pop-up menu.
+
+ * Click on the "Configure as Receiver" button and wait for it to turn
+   from yellow back to blue.
+
+ * Hopefully the configuration will have been successful. The Processing
+   console (or possibly system log) will contain a message if it was not
+   successful.
+
+
+= How to: Change the communication speed (baud rate) =
+
+(Note that this preserves all the other existing configuration
+settings.)
+
+ * Select the correct serial port from the pop-up menu.
+
+ * Select the desired baud rate from the pop-up menu below the "Set
+   baud rate button".
+
+ * Click on the "Set baud rate button" button and wait for it to turn
+   from yellow back to blue.
+
+ * Hopefully the configuration will have been successful. The Processing
+   console (or possibly system log) will contain a message if it was not
+   successful.
+
+
+= How to: Configure for Wireless Bootloading =
+
  * Select the correct serial port from the pop-up menu.
 
  * The configuration that ships with the script is designed to be used
