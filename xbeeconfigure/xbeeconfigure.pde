@@ -1,4 +1,14 @@
+/*
 
+   xbeeconfigure -- a tool to configure XBee modules
+   
+   See the README file for more details.
+   
+   (C) Copyright 2010 SparkFun Electronics
+   
+   Licensed under the GNU GPL version 3.0
+
+ */
 
 import processing.serial.*;
 
