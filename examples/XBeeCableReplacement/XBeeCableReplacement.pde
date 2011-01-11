@@ -8,7 +8,7 @@ const int WAIT_TIME_MS = 500;
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("Send the characters 'r', 'g' or 'b' to change the colour of the LED:");
+  Serial.println("Send the characters 'r', 'g' or 'b' to change LED colour:");
 }
 
 
