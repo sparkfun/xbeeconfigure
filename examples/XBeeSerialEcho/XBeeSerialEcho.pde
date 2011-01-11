@@ -88,7 +88,7 @@
    For more details and help read the XBee Shield and Explorer USB
    Quickstart Guide:
    
-      <http://www.sparkfun.com/commerce/tutorial_info.php?tutorials_id=192>
+      <http://sparkfun.com/tutorials/192>
 
  */
 
