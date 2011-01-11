@@ -92,13 +92,8 @@ const int RED_LED_PIN = 9;
 const int GREEN_LED_PIN = 10;
 const int BLUE_LED_PIN = 11;
 
-
+// Change this value if you want fast color changes
 const int WAIT_TIME_MS = 500;
-
-void setup() {
-  Serial.begin(9600);
-  Serial.println("Send the characters 'r', 'g' or 'b' to change LED colour:");
-}
 
 
 void setLedColour(int redIntensity, int greenIntensity, int blueIntensity) {
@@ -106,6 +101,13 @@ void setLedColour(int redIntensity, int greenIntensity, int blueIntensity) {
    analogWrite(GREEN_LED_PIN, greenIntensity);
    analogWrite(BLUE_LED_PIN, blueIntensity);
 }
+
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("Send the characters 'r', 'g' or 'b' to change LED colour:");
+}
+
 
 void loop() {
 
