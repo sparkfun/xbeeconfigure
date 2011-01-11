@@ -93,7 +93,7 @@
  */
 
 void setup() {
-  Serial.begin(9600); // See the "Enhancements" section above to learn when to change this.
+  Serial.begin(9600); // See "Enhancements" above to learn when to change this.
 }
 
 void loop() {
