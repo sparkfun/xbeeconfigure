@@ -97,6 +97,11 @@ const int WAIT_TIME_MS = 500;
 
 
 void setLedColour(int redIntensity, int greenIntensity, int blueIntensity) {
+   /*
+
+      This routine sets the PWM value for each color of the RGB LED.
+
+    */
    analogWrite(RED_LED_PIN, redIntensity);
    analogWrite(GREEN_LED_PIN, greenIntensity);
    analogWrite(BLUE_LED_PIN, blueIntensity);
@@ -104,6 +109,7 @@ void setLedColour(int redIntensity, int greenIntensity, int blueIntensity) {
 
 
 void setup() {
+  // Configure the serial port and display instructions.
   Serial.begin(9600);
   Serial.println("Send the characters 'r', 'g' or 'b' to change LED colour:");
 }
@@ -111,9 +117,12 @@ void setup() {
 
 void loop() {
 
+  // When specific characters are sent we change the current color of the LED.
   if (Serial.available()) {
     int characterRead = Serial.read();
     
+    // If the character matches change the state of the LED,
+    // otherwise ignore the character.
     switch(characterRead) {
        case 'r':
          setLedColour(255, 0, 0);
