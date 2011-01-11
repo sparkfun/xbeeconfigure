@@ -36,8 +36,13 @@ void loop() {
          setLedColour(0, 0, 255);       
          break;
       
+       case ' ':
+         setLedColour(0, 0, 0);       
+         break;
+
        default:
-         setLedColour(0, 0, 0);
+         // Ignore all other characters and leave the LED
+         // in its previous state.
          break;
     }
     
